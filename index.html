@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidia Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>     
+    <!--Header-->
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="purple" class="bi bi-dpad-fill" viewBox="0 0 16 16">
+                <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
+              </svg>
+            OBSIDIA GAMES
+          </a>
+        </div>
+      </nav>
+      <!--JUGADOR  - MARCADOR   -->
+      <div id="perfilJugador" class="perfil-jugador">
+        <span id="nombreJugadorVisible">Jugador: Invitado</span>
+      </div>
+      
+   <!-- Consultar nickname al usuario -->
+<div class="container text-center mt-5">
+    <h1 class="mb-4">¡Bienvenido!😊</h1>
+    <h3>🎮Disfruta de videojuegos en Obsidia Games🎮</h3>
+    <br>
+    <label class="form-label" id="nombreJugador">Ingrese nombre de jugador:</label>
+    <!-- Contenedor para alinear input y botón -->
+    <div class="nick-container">
+      <input type="text" class="form-control nickname" id="nickname" placeholder="Escribe un nickname aqui..." required>
+      <button type="submit" class="btn-nick">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-check2" viewBox="0 0 16 16">
+          <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!------------Juegos disponibles-->
+  <div class="container">
+      <!--Juego de memoria-->
+      <div class="row mt-4">
+          <div class="col-md-4">
+              <div class="card">
+                 <img src="https://cdn-icons-png.flaticon.com/512/6168/6168860.png" class="card-img-top" alt="Memoria img">
+                  <div class="card-body text-center">
+                      <h5 class="card-title">Juego de Memoria</h5>
+                      <p class="card-text">Pon a prueba tu memoria, encuentra las parejas.</p>                  
+                      <button class="btn btn-primary btn-jugar"  id="btnMemoria" type="button">Jugar</button>
+                  </div>
+              </div>
+          </div>
+      <!--Juego de trivia -->
+        <div class="col-md-4">
+            <div class="card">
+               <img src="https://cdn-icons-png.flaticon.com/512/5691/5691719.png" class="card-img-top" alt="Trivia img">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Juego de Trivia</h5>
+                    <p class="card-text">Pon a prueba tu conocimiento.</p>                  
+                    <button class="btn btn-primary btn-jugar"  id="btnTrivia" type="button">Jugar</button>
+                </div>
+            </div>
+        </div>
+        <!--Juego de Operaciones -->     
+            <div class="col-md-4">
+                <div class="card">
+                   <img src="https://cdn-icons-png.flaticon.com/512/6194/6194460.png" class="card-img-top" alt="Operaciones img">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Juego de Operaciones</h5>
+                        <p class="card-text">Proximamente.</p>                  
+                          <!-- <button class="btn btn-primary btn-jugar  "  id="btnOperaciones" type="button">Jugar</button> -->
+                    </div>
+                </div>
+            </div>
+      </div>
+  </div><br><br>
+<!--Pie de pagina-->
+            <footer>
+            <ul>   
+                <li>🎮​OBSIDIAN GAMES</li>               
+                <li>📞Tel #######</li>
+                <li>📧​obsidiangames.community@outlook.com</li>
+                <li>¿Quiénes sómos?</li>
+            </ul>
+            </footer>
+<!-- Java Script -->
+ <script src="./assets/js/script.js"></script>
+</body>
+</html>

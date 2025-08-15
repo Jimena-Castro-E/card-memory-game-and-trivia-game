@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de trivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/trivia.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <nav class="navbar bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="purple" class="bi bi-dpad-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z" />
+                    </svg>
+                    OBSIDIA GAMES
+                </a>
+            </div>
+        </nav>
+        <!--Nombre de jugador-->
+        <div id="perfilJugador" class="perfil-jugador">
+            <span id="nombreJugadorVisible">Jugador: Invitado</span>
+        </div>
+
+        <!-- Contenedor de animación -->
+        <div id="confetti-container"></div>
+        <div id="perder-overlay"></div>
+
+
+        <div class="container-fluid">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Obsidian Trivia</h1>
+                    <div class="quiz-header">
+                        <span>Preguntas</span>
+                        <span class="header-score">Puntaje 0/20</span>
+                    </div>
+                    <h2 class="question-text">¿Cuál es el hueso más grande del cuerpo humano?</h2>
+                    <div class="option-list">
+
+                    </div>
+                    <div class="quiz-footer">
+                        <span class="question-total">1 de 5 Preguntas</span>
+                        <button class="next-btn">Siguiente</button>
+                    </div>
+
+                    <div class="reiniciar-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white"
+                            class="bi bi-arrow-repeat" viewBox="0 0 16 16" id="repetir-boton">
+                            <path
+                                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                            <path fill-rule="evenodd"
+                                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                        </svg>
+                    </div>
+            </section>
+            <section>
+                <div class="result-box">
+                    <h2>Resultado del Quiz!</h2>
+                    <div class="porcentaje-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="score-text">Tu puntaje 0 de 20</span>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Reintentar</button>
+                        <button class="goHome-btn">Ir al menu</button>
+                    </div>
+                </div>
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white" class="bi bi-arrow-repeat"
+                viewBox="0 0 16 16" id="repetir-boton">
+                <path
+                    d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                <path fill-rule="evenodd"
+                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+            </svg>
+
+            <!--Contador y timer-->
+            <div class="contador">
+                <span class="correctas">Correctas: 0</span>
+                <span class="incorrectas">Incorrectas: 0</span>
+                <span class="timer">Tiempo: 20s</span>
+            </div>
+
+            <section class="trivia-pagina">
+                <div class="contenido">
+                    <h1>Juego de Trivia </h1>
+                    <p>Pon a prueba tu conocimiento general con este juego de memoria, deberás responder 20 preguntas de
+                        diferentes temas en tiempo record.</p>
+                    <button class="iniciar-btn">Iniciar Quiz</button>
+                </div>
+            </section>
+
+        </div>
+    </div><!--Cerrar content wrapper-->
+    <!--Pie de pagina-->
+    <footer>
+        <ul>
+            <li>🎮​OBSIDIAN GAMES</li>
+            <li>📞Tel #######</li>
+            <li>📧​obsidiangames.community@outlook.com</li>
+            <li>¿Quiénes sómos?</li>
+        </ul>
+    </footer>
+
+    <!-- Java Script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+        <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/preguntas.js"></script>
+    <script src="./assets/js/trivia.js"></script>
+</body>
+
+</html>

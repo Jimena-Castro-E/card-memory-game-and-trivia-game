@@ -1,0 +1,126 @@
+html,
+body {
+  
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+body {
+  background: linear-gradient(#5419cb, #17033f, #090218, #000000);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Fondo estático*/
+  background-size: cover;
+  /*El fondo cubre topo la pantalla */
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-label {
+  margin-right: 12%;
+  font-size: 20px;
+}
+
+.nick-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* espaciado*/
+  position: relative;
+  margin-top: 20px;
+}
+
+/*input para ingresar nickname*/
+.nickname {
+  width: 30%;
+}
+
+/*boton para guardar nickname*/
+.btn-nick {
+  background-color: green;
+  border: none;
+  height: 40px;
+  width: 42px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.btn-nick:hover {
+  background-color: rgb(36, 70, 36);
+}
+
+/*Contenedor de Juegos principal*/
+.card {
+  background-color: rgba(0, 0, 0, 0.63);
+  /* color transparentoso*/
+  color: azure;
+  transition: transform 0.3s ease;
+  /*La animacion se hace en 0,3 s */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* AGRANDA AL 105% */
+  box-shadow: 0 10px 20px rgba(196, 6, 186, 0.2);
+}
+
+.card-title {
+  color: aqua;
+}
+
+.btn-jugar {
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  font: 1.2em sans-serif;
+}
+
+.btn-jugar:hover {
+  background-color: rgb(15, 15, 78);
+}
+
+/*Pie de pagina*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(196, 6, 186, 0.2);
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+/*-----Diseño de nombre de jugador------*/
+.perfil-jugador {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: #09a382;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
